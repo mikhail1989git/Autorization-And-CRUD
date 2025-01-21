@@ -1,0 +1,25 @@
+﻿@model AutorizationAndCRUD.Models.User 
+@{
+    ViewData["Title"] = "Authorization";
+}
+<link rel="stylesheet" href="~/css/site.css">
+
+<div class="authorization">
+<h2>Authorization</h2>
+<form asp-action="index" asp-controller="home" method="post">
+<table>
+    <tr>
+        <td><input type="text" name="login" value="" placeholder="Login"/></td>
+    </tr>
+    <tr>
+        <td><input type="password" name="password" value="" placeholder="Password"/></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Войти"/></td>
+    </tr>
+    <tr>
+        <td><a asp-action="Registration">Регистрация</a></td>
+    </tr>
+</table>
+</form>
+</div>

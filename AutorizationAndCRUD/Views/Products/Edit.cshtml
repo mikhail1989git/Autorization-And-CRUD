@@ -1,0 +1,44 @@
+﻿@model AutorizationAndCRUD.Models.Product
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" href="~/css/site.css">
+
+<div class="page">
+<h2>Редактирование пользователя</h2>
+<form asp-action="edit" asp-controller="Products" asp-route-id="@Model.Id">
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        <label asp-for="Name">Название</label><br />
+                        <input type="text" asp-for="Name" />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <label asp-for="Price">Цена</label><br />
+                        <input type="number" asp-for="Price" />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <label asp-for="Description">Описание</label><br />
+                        <input type="text" asp-for="Description" />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <input type="submit" value="Отправить" />
+                    </p>
+                </td>
+            </tr>
+    </table>
+</form>
+</div>

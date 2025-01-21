@@ -1,0 +1,38 @@
+﻿@model AutorizationAndCRUD.Models.Product
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="~/css/site.css">
+
+<div class="page">
+<h2>Добавления товара</h2>
+<form asp-action="create" asp-controller="products">
+    <table>
+            <tr><td>
+                <p>
+                    <label app-for="Name">Название</label><br />
+                    <input type="text" asp-for="Name" />
+                </p>
+            </td></tr>
+            <tr><td>
+                <p>
+                    <label app-for="Price">Цена</label><br />
+                    <input type="number" asp-for="Price" />
+                </p>
+            </td></tr>
+            <tr><td>
+                <p>
+                    <label app-for="Description">Описание</label><br />
+                    <input type="text" asp-for="Description" />
+                </p>
+            </td></tr>
+            <tr>
+                <td>
+                <p>
+                    <input type="submit" value="Отправить" />
+                </p>
+                </td>
+            </tr>
+    </table>
+</form>
+</div>
